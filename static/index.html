@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who is it?</title>
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen">
+  <link rel="icon"       href="/assets/img/favicon.png">
+  <script src="/assets/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="header">
+    <img src="/assets/img/virus-96x96-white.png">
+    <title>Who is it?</title>
+  </div>
+  
+  <div id="container-main">
+    <div id="content-main" class="container">
+      <h1>Show my QR Code</h1>
+      <hr>
+      <div id="myqr" class="center">
+	<button id="btn-show-qrcode">Show</button>
+	<br>
+	<div id="qrcode"></div>
+      </div>
+      <script src="/assets/js/qrcode.js"></script>
+      <script type="text/javascript">
+    $('#btn-show-qrcode').click(function(){
+        var url = "https://test.xc9.fr:4243/show.html?id=1234567891"
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+	    text:        url,
+	    width:       300,
+	    height:      300,
+	    colorDark:   "#009933",
+	    colorLight:  "#ffffff",
+	    correctLevel: QRCode.CorrectLevel.Q,
+        });
+    });
+      </script>
+
+
+      <h1>Scan someone's QR code</h1>
+      <hr>
+      <div id="qr-scanner">
+        <div id="qr-reader"></div>
+        <div id="qr-reader-extra">
+          <button id="qr-reader-stop">Start</button>
+          <button id="qr-reader-switch">Switch camera</button>
+        </div>
+        <div id="qr-reader-results"></div>
+        <script src="/assets/js/html5-qrcode.min.js"></script>
+        <script src="/assets/js/scanner.js"></script>
+      </div>
+    </div>
+
+    <div id="footer">
+      <img class="right" src="/assets/img/virus-96x96-white.png">
+      <p>&copy; 2026 Leaveteam. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>

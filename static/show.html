@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who is it?</title>
+  <link rel="stylesheet" href="/assets/css/style.css" type="text/css" media="screen">
+  <link rel="icon"       href="/assets/img/favicon.png">
+  <script src="/assets/js/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <div id="header">
+    <img src="/assets/img/virus-96x96-white.png">
+    <title>Who is it?</title>
+  </div>
+  
+  <div id="container-main">
+    <div id="content-main" class="container">
+      <h1>Profile</h1>
+      <hr>
+      <div class="profile-picture">
+        <img src="/assets/img/peace.jpg" alt="User Picture">
+      </div>
+      <div class="profile-details">
+        <p><strong>Identity:</strong> Michel COLUCCI</p>
+        <p><strong>Manager:</strong>  Chuck NORIS</p>
+      </div>
+
+      <hr>
+      <button id="btn-home">Go Back</button>
+      <script type="text/javascript">
+	$('#btn-home').click(function(){
+	    document.location = '/';
+	});
+      </script>
+    </div>
+
+    <div id="footer">
+      <img class="right" src="/assets/img/virus-96x96-white.png">
+      <p>&copy; 2026 Leaveteam. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
